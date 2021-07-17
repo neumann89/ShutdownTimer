@@ -1,51 +1,67 @@
-# Shutdown Timer
-
-Shutdown/suspend your device after a specific time. This extension adds a submenu to the status area. 
+<h1 align="center">Shutdown Timer for Gnome Shell</h1>
+<p align="center">
+  <img alt="Shutdown Timer Icon" width="228" src="bin/icon.svg"/>
+  <a href="https://extensions.gnome.org/extension/792/shutdowntimer/">
+    <img alt="Get it on GNOME Extensions" width="228" src="https://raw.githubusercontent.com/andyholmes/gnome-shell-extensions-badge/master/get-it-on-ego.svg?sanitize=true"/>
+  </a>
+  <br/>
+  <b>Shutdown/reboot/suspend your device after a specific time or wake with a rtc alarm.</b>
+</p>
 
 ![Screenshot](screenshot.png)
 
+## Features
+- Timer for *Poweroff*, *Reboot*, *Suspend* (options can be reordered and hidden)
+  - Disabling the extension leaves a timer process alive if the user was inactive for more than a second (`org.gnome.Mutter.IdleMonitor.GetIdletime > 1000` is true when the screen saver disables the extension)
 
-There is a settings menu where you can change the following:
-* Maximum timer value
-* Default slider position
-* Show settings button in widget
-* Root mode: Uses "pkexec shutdown" command instead of default GNOME shutdown dialog. If monitor turns off while shutdown timer is running, then default timer in rootless mode gets interrupted.
-  With root mode activated this can not happen, but you have to enter the root password.
-* **!!! NEW !!!** Suspend mode: Suspend device instead of shutdown
+- Show scheduled shutdown info as *(sys)* (fetched from `/run/systemd/shutdown/scheduled`)
+  - Externally run `shutdown 100` displayed in menu: ![externalScheduleMenu](externalScheduleFeature.png)
+  - Displays the more urgent (external or interal) timer 
 
-## Official Installation
+- Install privileged control script: `shutdowntimerctl`
+  - Control `rtcwake` and `shutdown` as user
+  - Support for `rpm-ostree` installation
 
-Visit [https://extensions.gnome.org/extension/792/shutdowntimer/](https://extensions.gnome.org/extension/792/shutdowntimer/) and follow browser extension install instructions.
+- Wake alarm
+  - Set a real-time-clock (rtc) alarm which wakes the system after shutdown
+  - Wake info from: `/sys/class/rtc/rtc0/wakealarm`
+  - Wake info displayed in menu: ![wakeInfoMenu](wakeInfoFeature.png)
+  - Controlling wake alarm requires installation of privileged script
+  - Note: for advanced use-cases there are more suitable tools: e.g. [gnome-schedule](https://gitlab.gnome.org/GNOME/gnome-schedule)
+- Root shutdown protection
+  - Toggle system `shutdown ${REQUESTED_MINUTES + 1}` with shutdown timer (for *Poweroff* and *Reboot*)
+  - Protection against gnome-shell terminating e.g. when logging out 
+  - If privileged script is not installed, `shutdown` command is run as user
 
+- Check command
+  - Runs a shell command and will only continue shutdown if command succeeds
+  - Check command can be canceled
 
 ## Manual Installation
 
-Copy `ShutdownTimer@neumann` directory to `~/.local/share/gnome-shell/extensions`
+Requires `gnome-shell-extensions` and `gtk4-builder-tool`:
+```(shell)
+./scripts/build.sh -i
 ```
-$ cp -r ShutdownTimer@neumann ~/.local/share/gnome-shell/extensions
-```
+Then a new login is required.
 
-
-Install `gnome-shell-extensions`
+### Tool installation
+Requires root:
+```(shell)
+sudo ./tool/installer.sh --tool-suffix $USER install
 ```
-$ sudo apt install gnome-shell-extensions
-```
-
-Open GNOME tweak tool and enable `Shutdowntimer` in extensions menu.
-```
-$ gnome-tweaks
-```
+If available also supports `rpm-ostree` installation which may work without root.
 
 ### For GNOME 40+
 Install `org.gnome.Extensions` via flatpak
-```
-$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-$ flatpak install flathub org.gnome.Extensions
+```(shell)
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.gnome.Extensions
 ```
 
 Open GNOME shell extension tool
-```
-$ flatpak run org.gnome.Extensions
+```(shell)
+flatpak run org.gnome.Extensions
 ```
 
 ## Development
@@ -53,6 +69,10 @@ $ flatpak run org.gnome.Extensions
 ### Restart GNOME-Shell (Xorg only)
 Press `ALT+F2`, type `r` and press `Enter`
 
+### Start nested GNOME-Shell (Wayland)
+```(shell)
+dbus-run-session -- gnome-shell --nested --wayland
+```
 ### See Errors and Logs
 * Press `ALT+F2`, type `lg` and press `Enter`
 * Run `journalctl -f` in terminal

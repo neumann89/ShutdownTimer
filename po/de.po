@@ -1,0 +1,585 @@
+#
+# 	AUTHOR: Daniel Neumann
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Shutdown Timer GNOME Shell Extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-17 13:44+0200\n"
+"PO-Revision-Date: 2021-07-17 01:15+0200\n"
+"Last-Translator: Daniel Neumann\n"
+"Language-Team: GERMAN Jonatan Zeidler <jonatan_zeidler@gmx.de>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: tool/installer.sh:53
+msgid "Failed"
+msgstr "Fehlgeschlagen"
+
+#: tool/installer.sh:55
+msgid "Success"
+msgstr "Erfolg"
+
+#: tool/installer.sh:183
+msgid "podman required to build package"
+msgstr "podman notwendig für den RPM-Paket-Erstellung"
+
+#: tool/installer.sh:186
+msgid "creating temporary directory"
+msgstr "Erstellung vom temporären Verzeichnis"
+
+#: tool/installer.sh:191 tool/installer.sh:257 tool/installer.sh:260
+msgid "Building"
+msgstr "Erstelle"
+
+#: tool/installer.sh:191
+msgid "rpm-package in temporary directory"
+msgstr "RPM-Paket im temporären Verzeichnis"
+
+#: tool/installer.sh:196 tool/installer.sh:199 tool/installer.sh:202
+#: tool/installer.sh:264
+msgid "Copying"
+msgstr "Kopiere"
+
+#: tool/installer.sh:196 tool/installer.sh:293 tool/installer.sh:331
+msgid "policykit action"
+msgstr "PolicyKit-Aktion"
+
+#: tool/installer.sh:199 tool/installer.sh:298 tool/installer.sh:339
+msgid "policykit rule"
+msgstr "PolicyKit-Regel"
+
+#: tool/installer.sh:206
+msgid "Bundling sources"
+msgstr "Bündele Quelldateien"
+
+#: tool/installer.sh:257 tool/installer.sh:270
+msgid "podman image"
+msgstr "Podman-Image"
+
+#: tool/installer.sh:257
+msgid "for building rpm-package"
+msgstr "für die Erstellung des RPM-Paketes"
+
+#: tool/installer.sh:257 tool/installer.sh:273 tool/installer.sh:317
+msgid "this may take a minute"
+msgstr "dies dauert gewöhnlich einen Moment"
+
+#: tool/installer.sh:260
+msgid "rpm-package in container"
+msgstr "RPM-Paket im Container"
+
+#: tool/installer.sh:264
+msgid "from container"
+msgstr "vom Container"
+
+#: tool/installer.sh:267 tool/installer.sh:270
+msgid "Removing"
+msgstr "Entferne"
+
+#: tool/installer.sh:267
+msgid "container"
+msgstr "Container"
+
+#: tool/installer.sh:273 tool/installer.sh:288 tool/installer.sh:293
+#: tool/installer.sh:298
+msgid "Installing"
+msgstr "Installiere"
+
+#: tool/installer.sh:273 tool/installer.sh:317
+msgid "with rpm-ostree"
+msgstr "mit rpm-ostree"
+
+#: tool/installer.sh:276
+msgid "Successfully installed"
+msgstr "Erfolgreich installiert"
+
+#: tool/installer.sh:278 tool/installer.sh:320
+msgid "Restart required for changes to take effect."
+msgstr "Neustart erforderlich, sodass die Änderungen in Kraft treten."
+
+#: tool/installer.sh:288 tool/installer.sh:323 tool/installer.sh:328
+msgid "tool"
+msgstr "Werkzeug"
+
+#: tool/installer.sh:317 tool/installer.sh:323 tool/installer.sh:331
+#: tool/installer.sh:339
+msgid "Uninstalling"
+msgstr "Deinstalliere"
+
+#: tool/installer.sh:319
+msgid "Successfully uninstalled"
+msgstr "Erfolgreich deinstalliert"
+
+#: tool/installer.sh:326 tool/installer.sh:334 tool/installer.sh:342
+msgid "cannot remove"
+msgstr "entfernen nicht möglich"
+
+#: tool/installer.sh:328 tool/installer.sh:336 tool/installer.sh:344
+msgid "not installed at"
+msgstr "nicht installiert in"
+
+#: tool/installer.sh:336
+msgid "policy action"
+msgstr "Policy-Aktion"
+
+#: tool/installer.sh:344
+msgid "policy rule"
+msgstr "Policy-Regel"
+
+#: ui/prefs.ui:82
+msgid "Setup a privileged script and give user access via polkit"
+msgstr ""
+"Konfiguriere ein privilegiertes Skript und gebe Benutzer Zugriff via Polkit"
+
+#: ui/prefs.ui:84
+msgid "Install/Uninstall privileges for this user"
+msgstr "Installiere/Deinstalliere privilegiertes Skript für den Benutzer"
+
+#: ui/prefs.ui:115
+msgid "Hint: installed to \"/usr\" with rpm-ostree"
+msgstr "Hinweis: installiert in \"/usr\" mit rpm-ostree"
+
+#: ui/prefs.ui:157
+msgid "Install"
+msgstr "Installieren"
+
+#: ui/prefs.ui:192
+msgid "Use mode"
+msgstr "Verwende Option"
+
+#: ui/prefs.ui:236
+msgid "persistent shutdown or reboot by using 'shutdown -P/-r' command"
+msgstr "persistierendes Abschalten oder Neustarten via 'shutdown -P/-r' Befehl"
+
+#: ui/prefs.ui:238
+msgid "Toggle root shutdown with shutdown timer"
+msgstr "Schalte die Root-Absicherung zusammen mit der Ausschaltuhr"
+
+#: ui/prefs.ui:293
+msgid "Shutdown slider position (in &#37;)"
+msgstr "Standardposition des Ausschalt-Schiebereglers (in %)"
+
+#: ui/prefs.ui:352
+msgid "Maximum shutdown timer value (in minutes)"
+msgstr "Maximaler Ausschalt-Uhrenwert (in Minuten)"
+
+#: ui/prefs.ui:398
+msgid "Shutdown"
+msgstr "Abschalten"
+
+#: ui/prefs.ui:434
+msgid "Toggle wake with shutdown timer"
+msgstr "Schalte den Wecker zusammen mit der Ausschaltuhr"
+
+#: ui/prefs.ui:489
+msgid "Wake slider position (in &#37;)"
+msgstr "Standardposition des Wecker-Schiebereglers (in %)"
+
+#: ui/prefs.ui:549
+msgid "Maximum wake timer value (in minutes)"
+msgstr "Maximaler Wecker-Uhrenwert (in Minuten)"
+
+#: ui/prefs.ui:596
+msgid "Wake"
+msgstr "Wecker"
+
+#: ui/prefs.ui:626
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:43
+msgid "Show settings button"
+msgstr "Zeige Einstellungsbutton"
+
+#: ui/prefs.ui:664
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:80
+msgid "Comma-separated shutdown modes which are shown in the popup menu."
+msgstr "Kommagetrennt Ausschaltoptionen, die im Menü erscheinen."
+
+#: ui/prefs.ui:666
+msgid "Show shutdown items"
+msgstr "Zeige Ausschaltoptionen"
+
+#: ui/prefs.ui:705
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:49
+msgid "Show shutdown slider"
+msgstr "Zeige Ausschalt-Schieber"
+
+#: ui/prefs.ui:743
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:67
+msgid "Show notification text boxes"
+msgstr "Zeige Textbox-Notifikationen"
+
+#: ui/prefs.ui:785
+msgid "Show wake items"
+msgstr "Zeige Wecker-Optionen"
+
+#: ui/prefs.ui:833
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:55
+msgid "Show wake slider"
+msgstr "Zeige Wecker-Schieber"
+
+#: ui/prefs.ui:870
+msgid "Display"
+msgstr "Anzeige"
+
+#: ui/prefs.ui:900
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:103
+msgid "Enable check command"
+msgstr "Prüfbefehl verwenden"
+
+#: ui/prefs.ui:938
+msgid ""
+"Run check command after timer runs out. Only proceeds if check command "
+"terminates successfully."
+msgstr ""
+"Führt den Prüfbefehl nach dem auslaufen der Ausschaltuhr aus. Nur wenn der "
+"Prüfbefehl erfolgreich terminiert, wird vorangeschritten."
+
+#: ui/prefs.ui:940
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:91
+msgid "Check command"
+msgstr "Prüfbefehl"
+
+#: ui/prefs.ui:954
+msgid "command run in user shell"
+msgstr "Befehl wird mit der Benutzer-Shell ausgeführt"
+
+#: ui/prefs.ui:980
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:98
+msgid "Cancel the root mode protection before check command is run if enabled."
+msgstr "Stoppe die Root-Mode-Absicherung bevor der Prüfbefehl ausgeführt wird."
+
+#: ui/prefs.ui:982
+msgid "Cancel root mode protection before check"
+msgstr "Stoppt die Root-Modus-Absicherung vor dem Prüfbefehl"
+
+#: ui/prefs.ui:1015
+msgid "Check"
+msgstr "Prüfung"
+
+#: lib/Install.js:41
+msgid "START"
+msgstr "START"
+
+#: lib/Install.js:48
+msgid "END"
+msgstr "ENDE"
+
+#: lib/Install.js:50
+msgid "FAIL"
+msgstr "FEHLER"
+
+#: lib/Install.js:56
+msgid "install"
+msgstr "Installieren"
+
+#: lib/Install.js:56
+msgid "uninstall"
+msgstr "Deinstallieren"
+
+#: lib/MenuItem.js:65
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: lib/MenuItem.js:264 extension.js:157
+msgid "Waiting for confirmation"
+msgstr "Warte auf Bestätigung"
+
+#: lib/MenuItem.js:293 lib/ScheduleInfo.js:83
+msgid "min"
+msgid_plural "mins"
+msgstr[0] "Min."
+msgstr[1] "Min."
+
+#: lib/MenuItem.js:295
+msgid "(protect)"
+msgstr "(sicher)"
+
+#: lib/MenuItem.js:304 lib/ScheduleInfo.js:78
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "Std."
+msgstr[1] "Stdn."
+
+#: lib/MenuItem.js:307 extension.js:241
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "Minute"
+msgstr[1] "Minuten"
+
+#: lib/RootMode.js:74
+msgid "Can not cancel root process!"
+msgstr "Root-Prozess kann nicht abgebrochen werden."
+
+#: lib/RootMode.js:76
+msgid "CANCEL"
+msgstr "ABBRUCH"
+
+#: lib/RootMode.js:197
+msgid "Privileged script installation required!"
+msgstr "Installation des privilegierten Skriptes erforderlich!"
+
+#: lib/ScheduleInfo.js:46
+msgid "suspend"
+msgstr "Ruhezustand"
+
+#: lib/ScheduleInfo.js:47
+msgid "shutdown"
+msgstr "Abschalten"
+
+#: lib/ScheduleInfo.js:48
+msgid "reboot"
+msgstr "Neustart"
+
+#: lib/ScheduleInfo.js:49
+msgid "wakeup"
+msgstr "Wecken"
+
+#: lib/ScheduleInfo.js:55
+msgid "Shutdown Timer"
+msgstr "Ausschaltuhr"
+
+#: lib/ScheduleInfo.js:58
+msgid "until"
+msgstr "bis z."
+
+#: lib/ScheduleInfo.js:59
+msgid "(sys)"
+msgstr "(sys)"
+
+#: lib/ScheduleInfo.js:81
+msgid "sec"
+msgid_plural "secs"
+msgstr[0] "Sek."
+msgstr[1] "Sek."
+
+#: extension.js:66 extension.js:93
+msgid "Root mode protection failed!"
+msgstr "Root-Modus-Absicherung fehlgeschlagen!"
+
+#: extension.js:169
+msgid "Shutdown aborted"
+msgstr "Auschalten abgebrochen"
+
+#: extension.js:219
+msgid "Wake action failed!"
+msgstr "Wecker-Befehl fehlgeschlagen!"
+
+#: extension.js:225
+msgid "Shutdown Timer stopped"
+msgstr "Ausschaltuhr gestoppt"
+
+#: extension.js:228
+msgid "Confirmation canceled"
+msgstr "Prüfung abgebrochen"
+
+#: extension.js:240
+msgid "System will shutdown in"
+msgstr "System wird herunterfahren in"
+
+#: prefs.js:25
+msgid "Suspend"
+msgstr "Ruhezustand"
+
+#: prefs.js:26
+msgid "Power Off"
+msgstr "Ausschalten"
+
+#: prefs.js:27
+msgid "Restart"
+msgstr "Neustart"
+
+#: prefs.js:28
+msgid "Wake after"
+msgstr "Wecke nach"
+
+#: prefs.js:29
+msgid "No Wake"
+msgstr "Kein Wecken"
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:7
+msgid "Maximum shutdown time (in minutes)"
+msgstr "Maximaler Ausschalt-Uhrenwert (in Minuten)"
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:8
+msgid ""
+"Set maximum selectable shutdown time of the slider (in minutes). Use only "
+"values greater zero."
+msgstr ""
+"Setze maximal auswählbare Zeit des Ausschalt-Schiebereglers (in Minuten). "
+"Verwende nur Werte größer Null."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:13
+msgid "Maximum wake time (in minutes)"
+msgstr "Maximaler Wecker-Uhrenwert (in Minuten)"
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:14
+msgid ""
+"Set maximum selectable wake time of the slider (in minutes). Use only values "
+"greater zero."
+msgstr ""
+"Setze maximal auswählbare Zeit des Wecker-Schiebereglers (in Minuten). "
+"Verwende nur Werte größer Null."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:19
+msgid "Automatically start and stop wake on shutdown timer toggle"
+msgstr ""
+"Automatischen starten und stoppend des Weckers beim umschalten der "
+"Ausschaltuhr"
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:20
+msgid ""
+"Enable/Disable the wake alarm when the shutdown timer is started/stopped."
+msgstr ""
+"Einschalten/Auschalten des Weckers, wenn die Ausschaltuhr startet/stoppt."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:25
+msgid "Scheduled shutdown timestamp."
+msgstr "Geplanter Ausschaltzeitstempel."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:26
+msgid "Unix time in seconds of scheduled shutdown or -1 if disabled."
+msgstr ""
+"Unix Zeitstempel des geplanten Abschaltens in Sekunden oder -1 wenn nicht "
+"aktiv."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:31
+msgid "Wake slider position"
+msgstr "Wecker-Schieberegler-Position"
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:32
+msgid ""
+"Set wake slider position as percent of the maximum time. Must be in range 0 "
+"and 100."
+msgstr ""
+"Setze Wecker-Schieberegler-Position in Prozent der maximalen Zeit. Wert muss "
+"im Bereich von 0 bis 100 liegen."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:37
+msgid "Shutdown slider position"
+msgstr "Ausschalt-Schieberegler-Position"
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:38
+msgid ""
+"Set shutdown slider position as percent of the maximum time. Must be in "
+"range 0 and 100."
+msgstr ""
+"Setze Ausschalt-Schieberegler-Position in Prozent der maximalen Zeit. Wert "
+"muss im Bereich von 0 bis 100 liegen."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:44
+msgid "Show/hide settings button in widget."
+msgstr "Zeige/verberge Einstellungsbutton im Widget."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:50
+msgid "Show/hide shutdown slider in widget."
+msgstr "Zeige/verberge Ausschalt-Minuten-Schieber im Widget."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:56
+msgid "Show/hide wake slider in widget."
+msgstr "Zeige/verberge Ausschalt-Minuten-Schieber im Widget."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:61
+msgid "Show all wake items"
+msgstr "Zeige Wecker-Optionen"
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:62
+msgid "Show/hide all wake items in widget."
+msgstr "Zeige/verberge Wecker-Minuten-Schieber im Widget."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:68
+msgid "Show/hide notification text boxes on screen."
+msgstr "Zeige/verberge Textbox-Notifikationen auf dem Bildschirm."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:73
+msgid "Root mode"
+msgstr "Root-Modus"
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:74
+msgid ""
+"Set root mode on/off. In root mode powering off is done via 'pkexec' and "
+"'shutdown' terminal command."
+msgstr ""
+"Schalte Root-Modus an/aus. Im Root-Modus wird das Ausschalten per 'pkexec' "
+"und 'shutdown' Terminal-Kommando ausgeführt."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:79
+msgid "Shown shutdown modes"
+msgstr "Angezeigte Auschaltoptionen"
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:85
+msgid "Shutdown mode"
+msgstr "Ausschaltoption"
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:86
+msgid "Mode to use for shutdown command."
+msgstr "Verwendete Ausschaltoption der Stoppuhr."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:92
+msgid ""
+"Run command before shutdown command. Proceed with shutdown only if check "
+"command succeedes."
+msgstr ""
+"Führt Prüfbefehl vor dem Herunterfahren/Ruhezustand aus. Nur wenn der "
+"Prüfbefehl erfolgreich terminiert, wird das Herunterfahren/Ruhezustand "
+"ausgeführt."
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:97
+msgid "Allow cancel root mode protection"
+msgstr "Vor dem Prüfbefehl wird Root-Modus-Absicherung gestoppt"
+
+#: schemas/org.gnome.shell.extensions.shutdowntimer-neumann.gschema.xml:104
+msgid "Check command is skipped if disabled."
+msgstr "Prüfbefehl wird übersprungen, wenn er deaktiviert ist."
+
+#~ msgid "Privileged script and polkit policies enabled/disabled"
+#~ msgstr "Privilegiertes Skript und Polkit-Regeln einschalten/auschalten"
+
+#~ msgid ""
+#~ "Indicates the state of installation of the privileged script and polkit "
+#~ "policies."
+#~ msgstr ""
+#~ "Zeigt den Status der Installation des privilegierten Skripts und der "
+#~ "Polkit-Regeln an."
+
+#~ msgid "Log text for installation info"
+#~ msgstr "Log-Text für die Installations-Info"
+
+#~ msgid ""
+#~ "Text that is displayed to user when installing/uninstalling privileged "
+#~ "script."
+#~ msgstr ""
+#~ "Text der dem Benutzer angezeigt wird, wenn das privilegierte Skript "
+#~ "installiert/deinstalliert wird."
+
+#~ msgid ""
+#~ "uses 'pkexec shutdown' command, no interruption of timer, but needs root "
+#~ "password"
+#~ msgstr ""
+#~ "Verwendet den 'pkexec shutdown' Befehl, keine Unterbrechung der "
+#~ "Ausschaltuhr möglich, aber benötigt das Root-Passwort"
+
+#~ msgid "Root mode protection"
+#~ msgstr "Root-Modus-Absicherung"
+
+#~ msgid "cause: rpmbuild not successful"
+#~ msgstr "Ursache: RPM-Erstellung fehlgeschlagen"
+
+#~ msgid "image"
+#~ msgstr "Image"
+
+#~ msgid "Mode"
+#~ msgstr "Modus"
+
+#~ msgid "(root)"
+#~ msgstr "(root)"
+
+#~ msgid "Reboot"
+#~ msgstr "Neustart"

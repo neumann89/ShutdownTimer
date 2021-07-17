@@ -1,0 +1,10 @@
+/locale
+/schemas/gschemas.compiled
+*~
+*#
+*-gtk4.ui
+*.zip
+*.png
+*.mo
+*.env
+
